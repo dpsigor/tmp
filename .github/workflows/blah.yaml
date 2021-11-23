@@ -1,0 +1,13 @@
+name: Nome da ação
+
+on:
+  push:
+    branches: main
+    
+jobs:
+  alou:
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: actions/checkout@v2
+      - name: Primeiro passo
+        run: echo "hello world"
