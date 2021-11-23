@@ -10,10 +10,11 @@ jobs:
     steps:
       # - uses: actions/checkout@v2
       - name: Primeiro passo
-        run: echo "hello world"
-        run: which python3
-        run: which node
-        run: which docker
-        run: docker build -t teste .
-        run: docker run --rm teste
-        run: echo "deu tudo certo"
+        run:
+          - echo "hello world"
+          - which python3
+          - which node
+          - which docker
+          - docker build -t teste .
+          - docker run --rm teste
+          - echo "deu tudo certo"
