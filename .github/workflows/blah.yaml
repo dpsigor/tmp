@@ -8,14 +8,14 @@ jobs:
   alou:
     runs-on: ubuntu-latest
     steps:
-      # - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Primeiro passo
         run: echo "hello world" &&
+          ls &&
           which python3 &&
           which node &&
           which docker &&
           docker build -t teste . &&
           docker run --rm teste &&
           echo "deu tudo certo" &&
-          echo ${{ secrets.SUPERSECRETO }} &&
-          ls
+          echo ${{ secrets.SUPERSECRETO }}
