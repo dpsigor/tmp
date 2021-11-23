@@ -10,11 +10,14 @@ jobs:
     steps:
       # - uses: actions/checkout@v2
       - name: Primeiro passo
-        run:
-          - echo "hello world"
-          - which python3
-          - which node
-          - which docker
-          - docker build -t teste .
-          - docker run --rm teste
-          - echo "deu tudo certo"
+        script_stop: true
+        script: |
+          echo "hello world"
+          which python3
+          which node
+          which docker
+          docker build -t teste .
+          docker run --rm teste
+          echo "deu tudo certo"
+          echo ${{ secrets.SUPERSECRETO }}
+          ls
