@@ -10,7 +10,6 @@ jobs:
     steps:
       # - uses: actions/checkout@v2
       - name: Primeiro passo
-        script_stop: true
         run: echo "hello world" &&
           which python3 &&
           which node &&
